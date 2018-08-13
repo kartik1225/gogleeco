@@ -58,7 +58,7 @@
 				      column
 				    >
 
-				      <h3 class=" display-1 or" style="padding: 10px;">World Class Events</h3>
+				      <h3 class=" display-1 or" style="padding: 10px;">Our Values</h3>
 				      <p class="hr caption" style="max-width:900px;"><span>&nbsp {{coreValues}} &nbsp</span></p>
 
 				      <v-layout wrap>
@@ -169,7 +169,7 @@
 
 								<v-layout>
 									<img src='/static/email_icon.png' style="height: 18px;">
-									<p style="margin-left: 10px;">+info@gogleeco.com</p>
+									<p style="margin-left: 10px;">info@gogleeco.com</p>
 								</v-layout>
 								
 							</div>
