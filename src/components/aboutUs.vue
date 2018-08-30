@@ -78,7 +78,7 @@
 					      		<v-container>
 					      		<v-layout column align-center>
 						      		<img src='/static/icon_iniciative.png' style='height: 60px;'/>
-						      		<p class="or" style="padding: 10px; margin:auto;">Initiative and creativity</p>
+						      		<p class="or" style="padding: 10px; margin:auto;">Initiative and Creativity</p>
 						      		<p class="text-xs-center" >{{initiativesTxt}}</p>
 						      	</v-layout>
 						      	</v-container>
@@ -90,7 +90,7 @@
 					      		<v-container>
 					      		<v-layout column align-center>
 						      		<img src='/static/Icon_tech.png' style='height: 60px;'/>
-						      		<p class="or" style="padding: 10px; margin:auto;">Technology and innovation</p>
+						      		<p class="or" style="padding: 10px; margin:auto;">Technology and Innovation</p>
 						      		<p class="text-xs-center" >{{techText}}</p>
 						      	</v-layout>
 						      	</v-container>
@@ -152,7 +152,7 @@
 					  <v-flex sm6 xs12>
 					  		<div style="margin-top: 50px;">
 							    <p class='display-1 or'>RIYADH</p>
-							    <p class="body-2">Moussa Bin Naseer Street,<br> Riyadh, Saudi Arabia</p>
+							    <p class="body-2">Musa Ibn Nusair Street,<br> Riyadh, Saudi Arabia</p>
 							</div>
 
 							<div style='margin-top:50px;'>
@@ -163,17 +163,17 @@
 
 								<v-layout>
 									<img src='/static/Fax_Icon.png' style="height: 18px;">
-									<p style="margin-left: 10px;">+9664177177</p>
+									<p style="margin-left: 10px;">+966114177177</p>
 								</v-layout>
 
 								<v-layout>
 									<img src='/static/email_icon.png' style="height: 18px;">
 									<p style="margin-left: 10px;">info@gogleeco.com</p>
 								</v-layout>
-								
+
 							</div>
 					  </v-flex>
- 
+
 					  <v-flex sm6 xs12>
 					  	<v-text-field
 			  	            label="Solo"
@@ -229,7 +229,7 @@
 
 					  	<v-card class='white' style='opacity: 0.7'>
 					  	 <div style='padding-left: 10px;'>
-					  	   
+
 					  	<v-textarea
 					  	          name="input-7-1"
 					  	          placeholder='How can we help you?'
@@ -252,7 +252,7 @@
 		<v-card>
 			<v-layout justify-center column align-center>
 				<h3 class=" display-1 or" style="padding: 10px;">Locate Us</h3>
-				<p class="hr3 caption" style="max-width:900px;"><span>&nbsp Moussa Bin Naseer Street, Riyadh, Saudi Arabia &nbsp</span></p>
+				<p class="hr3 caption" style="max-width:900px;"><span>&nbsp Musa Ibn Nusair Street, Riyadh, Saudi Arabia &nbsp</span></p>
 			</v-layout>
 
 		</v-card>
@@ -263,7 +263,7 @@
 		  style="width: 100%; height: 300px"
 		>
 		  <GmapMarker
-		  
+
 		    :position="center"
 		    :clickable="true"
 		    :draggable="true"
@@ -287,14 +287,14 @@ import axios from 'axios'
 		data(){
 			return{
 				aboutUsTxt:` started to organize exhibitions and conferences in 2002 with expertise in Organization, management and implementation of exhibitions and conferences the comapny Contribute to the national transformation program by introducing initiatives for exhibitions Conferences and forums that benefit and benefit young people and society.`,
-				visionTxt:`To be a leading Saudi international company Organizing conferences and exhibitions and creating national youth initiatives Which contributes to Vision 2030`,
+				visionTxt:`To be a leading Saudi international company Organizing conferences and exhibitions and creating national youth initiatives Which contributes to the Vision of 2030`,
 				coreValues:`Our core values ​​remain the cornerstone of our company, which we rely on in our business ethics system`,
 				LearningAndDev:`We commit to continuous development and build experience for our employees and partners`,
 				initiativesTxt:`Create the best creative ideas and encourage Introducing national initiatives`,
 				techText:`Use the latest technology and innovation Applications that contribute to Raise work efficiency`,
 				partnerTxt:`We cooperate with local and international organizations And related institutions to develop Exhibitions and conferences`,
-				ourServices:`We specialize in providing the following services with high efficiency`,
-				stayConnectedTxt:`We are happy to contact you all the time to answer all your questions and provide you with everything you need to create a successful event`,
+				ourServices:`We are specialized in providing the following services with high efficiency`,
+				stayConnectedTxt:`We are happy to get connected with you all the time to answer all your questions and provide you with everything you need to create a successful event`,
 				ourServicesArray:[
 					{icon:`Icon_tech_design.png`,title:'Technical design'},
 					{icon:`Icon_media_production.png`,title:'Media Production'},
@@ -352,7 +352,7 @@ import axios from 'axios'
 		created(){
 
 		}
-	}	
+	}
 </script>
 
 
@@ -382,11 +382,11 @@ import axios from 'axios'
 	max-width: 300px;
 }
 
-.hr { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr span { background:#000; padding:0 0.5px; }
 
-.hr2 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr2 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr2 span { background:#fff; padding:0 0.5px; }
 
@@ -404,7 +404,7 @@ import axios from 'axios'
 	opacity: 0.7;
 }
 
-.hr3 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr3 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr3 span { background:#fff; padding:0 0.5px; }
 
@@ -419,7 +419,7 @@ import axios from 'axios'
 
 .contact_us{
 	height: 615px !important;
-	background-color:black; 
+	background-color:black;
 }
 
 @media screen and (max-width:600px){

@@ -146,7 +146,7 @@
 		<div id='Contact_us'>
 			<v-parallax src="/static/bg4.png" class='bg4 contact_us'>
 				<v-layout column style='padding: 10px;'>
-					<p class="display-1 or">لنبقى على تواصل!</p>
+					<p class="display-1 or"> كن على تواصل</p>
 					<p class="body-2" style="max-width: 600px;">{{stayConnectedTxt}}</p>
 
 					<v-layout row wrap>
@@ -164,17 +164,17 @@
 
 								<v-layout>
 									<img src='/static/Fax_Icon.png' style="height: 18px;">
-									<p style="margin-left: 10px;">+9664177177</p>
+									<p style="margin-left: 10px;">+966114177177</p>
 								</v-layout>
 
 								<v-layout>
 									<img src='/static/email_icon.png' style="height: 18px;">
 									<p style="margin-left: 10px;">info@gogleeco.com</p>
 								</v-layout>
-								
+
 							</div>
 					  </v-flex>
- 
+
 					  <v-flex sm6 xs12>
 					  	<v-text-field
 			  	            label="Solo"
@@ -223,14 +223,14 @@
 			  	            background-color='white'
 			  	            light
 			  	            color='black'
-			  	            placeholder='موضوع'
+			  	            placeholder='الموضوع'
 			  	            style='opacity: 0.7'
 			  	            v-model='contact.subject'
 					  	></v-text-field>
 
 					  	<v-card class='white' style='opacity: 0.7'>
 					  	 <div style='padding-left: 10px;'>
-					  	   
+
 					  	<v-textarea
 					  	          name="input-7-1"
 					  	          placeholder='كيف يمكننا مساعدتك؟'
@@ -252,7 +252,7 @@
 
 		<v-card>
 			<v-layout justify-center column align-center>
-				<h3 class=" display-1 or" style="padding: 10px;">حدد لنا</h3>
+				<h3 class=" display-1 or" style="padding: 10px;"> موقعنا </h3>
 				<p class="hr3 caption" style="max-width:900px;"><span>&nbsp شارع موسى بن نصير ، الرياض ، المملكة العربية السعودية &nbsp</span></p>
 			</v-layout>
 
@@ -264,7 +264,7 @@
 		  style="width: 100%; height: 300px"
 		>
 		  <GmapMarker
-		  
+
 		    :position="center"
 		    :clickable="true"
 		    :draggable="true"
@@ -287,8 +287,8 @@ import axios from 'axios'
 	export default{
 		data(){
 			return{
-				aboutUsTxt:`أن تكون شركة من الشركات السعودية العالمية الرائدة في تنظيم المؤتمرات والمعارض وابتكار المبادرات الوطنية الشبابيةالتي تساهم في رؤية 2030`,
-				visionTxt:`أن تكون شركة من الشركات السعودية العالمية الرائدة في تنظيم المؤتمرات والمعارض وابتكار المبادرات الوطنية الشبابيةالتي تساهم في رؤية 2030`,
+				aboutUsTxt:`كانت انطلاقتنا في عام 2002 كمزود ومنفذ للخدمات اللوجستية. والتجهيزات الإنشائية والفنية للمعارض والمؤتمرات وتقديم الاستشارات للمنظمين وإدارة الفعاليات. ومع انطلاق رؤية 2030 وجب علينا أن نشارك بشكل أكثر فاعلية في تحقيق أهداف الرؤية، وذلك عبر التنظيم المباشر للمعارض والمؤتمرات حيث لا تنقصنا الخبرة في هذا المجال. ولأننا نمتلك كل المقومات اللازمة بأن نكون في الطليعة`,
+				visionTxt:`أن نكون من الشركات السعودية العالمية الرائدة في تنظيم المؤتمرات والمعارض وابتكار المبادرات الوطنية الشبابيةالتي تساهم في رؤية 2030`,
 				coreValues:`تبقى قيمنا الأساسية هي حجر الزاوية لشركتنا وهي ما نعتمد عليه في نظام أخلاقيات العمل لدينا`,
 				LearningAndDev:`خلق أفضل الأفكار الإبداعية وتشجيع طرح المبادرات الوطنية`,
 				initiativesTxt:`خلق أفضل الأفكار الإبداعية وتشجيع طرح المبادرات الوطنية`,
@@ -350,7 +350,7 @@ import axios from 'axios'
 
 			}
 		}
-	}	
+	}
 </script>
 
 
@@ -379,11 +379,11 @@ import axios from 'axios'
 	max-width: 300px;
 }
 
-.hr { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr span { background:#000; padding:0 0.5px; }
 
-.hr2 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr2 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr2 span { background:#fff; padding:0 0.5px; }
 
@@ -398,7 +398,7 @@ import axios from 'axios'
 
 .contact_us{
 	height: 615px !important;
-	background-color:black; 
+	background-color:black;
 }
 
 
@@ -457,7 +457,7 @@ import axios from 'axios'
 
 
 
-.hr3 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; } 
+.hr3 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
 .hr3 span { background:#fff; padding:0 0.5px; }
 </style>
