@@ -24,7 +24,7 @@
 			  		</v-layout>
 			  		<h2 class="text-xs-center font-weight-thin or">رؤيتنا</h2>
 			  		<v-container>
-			  			<p class="text-xs-center"><span><img src='/static/logo.png' style="height:16px;"></span> &nbsp {{aboutUsTxt}}</p>
+			  			<p class="text-xs-center">&nbsp {{aboutUsTxt}}</p>
 			  		</v-container>
 			  	</v-container>
 			  </div>
@@ -39,7 +39,7 @@
 			  		</v-layout>
 			  		<h2 class="text-xs-center font-weight-thin or">من نحن</h2>
 			  		<v-container>
-			  			<p class="text-xs-center"><span><img src='/static/logo.png' style="height:16px;"></span> &nbsp{{visionTxt}}</p>
+			  			<p class="text-xs-center">&nbsp{{visionTxt}}</p>
 			  			<v-layout justify-center>
 			  			<img src='/static/2030_LOGO.png' style="height: 60px;">
 			  		</v-layout>
