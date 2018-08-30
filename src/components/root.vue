@@ -11,7 +11,7 @@
             <v-divider></v-divider>
 
             <v-list-tile
-              v-for="btn in navBtns"
+              v-for="btn in navBtnsHolder"
               @click="(drawer = false,inView(btn.id))"
             >
 
@@ -22,15 +22,21 @@
           </v-list>
         </v-navigation-drawer>
 
-    <v-toolbar color='black' dark absolute >
+    <v-toolbar color='black' dark fixed >
       <v-toolbar-side-icon class="hidden-md-and-up" @click='drawer = !drawer'></v-toolbar-side-icon>
       <img role='button' @click='href(`/`)' src='/static/bigLOGO.png' style="height: 80%;" />
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <template v-for='btn in navBtns'>
+        <template v-for='btn in navBtnsHolder'>
             <v-btn flat @click='inView(btn.id)'>{{btn.name}}</v-btn>
+
           </template>
+          <v-spacer></v-spacer>
       </v-toolbar-items>
+
+          <v-chip small color='primary' @click='toggleLan'>
+            {{lanBtnText}}
+          </v-chip>
     </v-toolbar>
     <main>
       <router-view/>
@@ -82,6 +88,7 @@ export default {
       ],
       drawer:false,
       navButtons:[],
+      navBtnsHolder:[],
       navBtns:[
         {name:`About us`,id:'About_us'},
         {name:`Our values`,id:'Our_values'},
@@ -93,12 +100,14 @@ export default {
         {id:`Our_values`,name:'قيمنا الجوهرية'},
         {id:`Services`,name:'خدماتنا'},
         {id:`Contact_us`,name:'اتصل بنا'}
-      ]
+      ],
+      lanBtnText:'العربية'
     }
   },
   watch:{
     "$route.fullPath"(){
       this.changeToAr();
+      console.log(this.navBtnsHolder[0].name);
     }
   },
   methods:{
@@ -111,9 +120,23 @@ export default {
     },
     changeToAr(){
       if(this.$route.fullPath === '/ar'){
-        this.navBtns = this.navBtnsAr
+        // this.navBtnsHolder = this.navBtnsAr;
+        this.navBtnsHolder = [];
+        this.navBtnsHolder.push(... this.navBtnsAr);
       }else{
-        this.navBtns = this.navBtns
+        this.navBtnsHolder = [];
+        // this.navBtnsHolder = this.navBtns;
+        this.navBtnsHolder.push(... this.navBtns);
+      }
+    },
+
+    toggleLan(){
+      if(this.$route.fullPath === '/ar'){
+        this.$router.push('/');
+        this.lanBtnText = 'العربية';
+      }else{
+        this.lanBtnText = 'English';
+        this.$router.push('/ar');
       }
     }
   },

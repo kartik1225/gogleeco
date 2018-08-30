@@ -52,12 +52,11 @@
 
 		<div>
 		<div id='Our_values' >
-			<v-parallax src="/static/2nd_bg.png" height='100%' >
+			<v-parallax src="/static/2nd_bg.png" class='our_vals'>
 				<v-layout
 				      align-center
 				      column
 				    >
-
 				      <h3 class=" display-1 or" style="padding: 10px;">Our Values</h3>
 				      <p class="hr caption" style="max-width:900px;"><span>&nbsp {{coreValues}} &nbsp</span></p>
 
@@ -123,7 +122,7 @@
 				</v-layout>
 
 				<div>
-					<v-parallax src="/static/bg3.png" height='100%' style='background: #f08000;'>
+					<v-parallax src="/static/bg3.png" style='background: #f08000;' class='services'>
 						<v-layout wrap>
 							<v-flex xs6 sm4 v-for='d in ourServicesArray'>
 								<div>
@@ -144,7 +143,7 @@
 		</div>
 
 		<div id='Contact_us'>
-			<v-parallax src="/static/bg4.png" height='100%' class='bg4'>
+			<v-parallax src="/static/bg4.png" class='bg4 contact_us'>
 				<v-layout column style='padding: 10px;'>
 					<p class="display-1 or">STAY CONNECTED</p>
 					<p class="body-2" style="max-width: 600px;">{{stayConnectedTxt}}</p>
@@ -359,6 +358,7 @@ import axios from 'axios'
 
 
 <style>
+
 .v-messages__message{
 	font-size: 18px;
 	color: white;
@@ -408,10 +408,35 @@ import axios from 'axios'
 
 .hr3 span { background:#fff; padding:0 0.5px; }
 
+.our_vals{
+	height: 500px !important;
+	background:black;
+}
+
+.services{
+	height: 300px !important;
+}
+
+.contact_us{
+	height: 615px !important;
+	background-color:black; 
+}
 
 @media screen and (max-width:600px){
 	.bgTitle{
 		font-size: 30px !important;
+	}
+
+	.our_vals{
+		height:860px !important;
+	}
+
+	.services{
+		height: 500px !important;
+	}
+
+	.contact_us{
+		height: 100% !important;
 	}
 
 	.gr{
