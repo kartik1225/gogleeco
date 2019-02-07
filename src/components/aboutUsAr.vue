@@ -1,16 +1,25 @@
 <template>
 	<div>
+
+
 		<!-- about us -->
 	<div id='About_us'>
 		<div>
-			<v-parallax src="/static/aboutUs.png">
+			<v-parallax src="/static/bg_top.png">
 				<v-layout
 				      align-center
 				      column
 				      justify-center
 				    >
-				      <h1 class="display-2 font-weight-thick mb-3 Title bgTitle" >أحداث عالمية المستوى</h1>
-				      <img class='gr'src='/static/GraphicElAbout.png' style="margin: auto;">
+				    	<img src="static/bottom_logo.png" :style="`height:120px`">
+				    	<br>
+				      	<p :class="`${$vuetify.breakpoint.width > 600?`display-2`:`headline`} font-weight-thick mb-3`" >
+				      		<span
+	      		               class="txt-rotate"
+	      		               data-period="2000"
+	      		               data-rotate='[ "الملتقى السعودي الثاني لصناعة الأعمال والوظائف","في الفترة من 12 الى 14 اغسطس","ورش عمل","وظائف للجنسين"]'></span>
+				      	</p>
+				      	<v-btn round class="white black--text" large @click="href(`https://for2030.gogleeco.com`)">اضغط هنا</v-btn>
 				    </v-layout>
 			</v-parallax>
 		</div>
@@ -22,7 +31,7 @@
 			  		<v-layout justify-center>
 			  			<img src="/static/ICONus.png" style="height: 50px;">
 			  		</v-layout>
-			  		<h2 class="text-xs-center font-weight-thin or">رؤيتنا</h2>
+			  		<h2 class="text-xs-center font-weight-thin or">من نحن</h2>
 			  		<v-container>
 			  			<p class="text-xs-center">&nbsp {{aboutUsTxt}}</p>
 			  		</v-container>
@@ -37,7 +46,7 @@
 			  			<!-- <v-icon style='font-size: 50px; color: #ef8000;'>supervisor_account</v-icon> -->
 			  			<img src="/static/ICONvision.png" style="height: 50px;">
 			  		</v-layout>
-			  		<h2 class="text-xs-center font-weight-thin or">من نحن</h2>
+			  		<h2 class="text-xs-center font-weight-thin or">رؤيتنا</h2>
 			  		<v-container>
 			  			<p class="text-xs-center">&nbsp{{visionTxt}}</p>
 			  			<v-layout justify-center>
@@ -283,6 +292,7 @@
 
 <script>
 import axios from 'axios'
+import textAni from './textAni.js'
 
 	export default{
 		data(){
@@ -326,6 +336,8 @@ import axios from 'axios'
 		    	}
 			}
 		},
+		wach:{
+		},
 		methods:{
 			send(){
 				let data = {
@@ -348,6 +360,9 @@ import axios from 'axios'
 
 				window.location = `mailto:${email}?subject=${e(data.subject)}&body=${e(body)}`;
 
+			},
+			href(link){
+				window.location = link;
 			}
 		}
 	}
