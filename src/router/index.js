@@ -13,11 +13,11 @@ export default new Router({
       component: root,
       children:[
       {
-        path:'/ar',
+        path:'/',
       	component:aboutUs
       },
       {
-        path:'/',
+        path:'/ar', 
         component:aboutUsAr
       }
       ]

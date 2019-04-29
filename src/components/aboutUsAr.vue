@@ -4,8 +4,8 @@
 
 		<!-- about us -->
 	<div id='About_us'>
-		<div>
-			<v-parallax src="/static/bg_top.png">
+		<div >
+			<v-parallax src="/static/bg_top.png" v-show="false" > 
 				<v-layout
 				      align-center
 				      column
@@ -13,18 +13,20 @@
 				    >
 				    	<img src="static/bottom_logo.png" :style="`height:120px`">
 				    	<br>
-				      	<p :class="`${$vuetify.breakpoint.width > 600?`display-2`:`headline`} font-weight-thick mb-3`" >
+				      	<p dir="rtl" :class="`${$vuetify.breakpoint.width > 600?`display-2`:`headline`} font-weight-thick mb-3`" >
 				      		<span
 	      		               class="txt-rotate"
 	      		               data-period="2000"
-	      		               data-rotate='[ "الملتقى السعودي الثاني لصناعة الأعمال والوظائف","في الفترة من 12 الى 14 اغسطس","ورش عمل","وظائف للجنسين"]'></span>
+	      		               data-rotate='[ "الملتقى السعودي الثاني لصناعة الأعمال والوظائف"
+	      		               ,"يومي 30 ابريل و 1 مايو 2019",
+	      		               "ورش عمل","وظائف للجنسين"]'></span>
 				      	</p>
-				      	<v-btn round class="white black--text" large @click="href(`https://for2030.gogleeco.com`)">اضغط هنا</v-btn>
+				      	<v-btn round class="white black--text" large @click="href(`https://for2030.gogleeco.com`)">دخول</v-btn>
 				    </v-layout>
 			</v-parallax>
 		</div>
 
-		<v-layout row wrap>
+		<v-layout row wrap style="margin-top:56px;">
 		  <v-flex xs12 sm6>
 			  <div >
 			  	<v-container>
@@ -283,7 +285,21 @@
 
 		<!-- <img src='/static/map.png' style="width: 100%;"> -->
 
+		<!-- will be removed -->
+		<v-dialog v-model="popUp" max-width="800px" style="border-radius:15px;">
+				<div elevation-0 style="position:relative; border-radius:15px;">
+					<div style="position:absolute; right:0%;">
+							<v-btn class="white" @click="popUp = !popUp" round  v-show="$vuetify.breakpoint.width > 600">
+							إغلاق
+							</v-btn>
 
+							<v-btn class="white" small icon @click="popUp = !popUp" round v-show="$vuetify.breakpoint.width < 600">
+							<v-icon>clear</v-icon>
+							</v-btn>
+					</div>
+					<img src="/static/gogleeco_pop.jpg" style="width:100%; height:auto; border-radius: 15px; display: block;"/>
+				</div>
+		</v-dialog>
 
 	</div>
 
@@ -297,6 +313,7 @@ import textAni from './textAni.js'
 	export default{
 		data(){
 			return{
+				popUp:true,
 				aboutUsTxt:`كانت انطلاقتنا في عام 2002 كمزود ومنفذ للخدمات اللوجستية. والتجهيزات الإنشائية والفنية للمعارض والمؤتمرات وتقديم الاستشارات للمنظمين وإدارة الفعاليات. ومع انطلاق رؤية 2030 وجب علينا أن نشارك بشكل أكثر فاعلية في تحقيق أهداف الرؤية، وذلك عبر التنظيم المباشر للمعارض والمؤتمرات حيث لا تنقصنا الخبرة في هذا المجال. ولأننا نمتلك كل المقومات اللازمة بأن نكون في الطليعة`,
 				visionTxt:`أن نكون من الشركات السعودية العالمية الرائدة في تنظيم المؤتمرات والمعارض وابتكار المبادرات الوطنية الشبابيةالتي تساهم في رؤية 2030`,
 				coreValues:`تبقى قيمنا الأساسية هي حجر الزاوية لشركتنا وهي ما نعتمد عليه في نظام أخلاقيات العمل لدينا`,
@@ -362,7 +379,8 @@ import textAni from './textAni.js'
 
 			},
 			href(link){
-				window.location = link;
+				var win = window.open(link, '_blank');
+				win.focus();
 			}
 		}
 	}
@@ -466,11 +484,6 @@ import textAni from './textAni.js'
 	background-color: white;
 	opacity: 0.7;
 }
-
-
-
-
-
 
 .hr3 { width:100%; text-align:center; border-bottom: 1px solid #ef8000; line-height:0.1em; margin:10px 0 20px; }
 
