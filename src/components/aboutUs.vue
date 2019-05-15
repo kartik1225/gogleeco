@@ -285,7 +285,7 @@
 		<!-- will be removed -->
 		<v-dialog v-model="popUp" max-width="800px" style="border-radius:15px;"> 
 				<div elevation-0 style="position:relative; border-radius:15px;">
-					<div style="position:absolute; right:0%;">
+					<div style="position:absolute; bottom: 0px;">
 							<v-btn class="white" @click="popUp = !popUp" round  v-show="$vuetify.breakpoint.width > 600">
 							إغلاق
 							</v-btn>
