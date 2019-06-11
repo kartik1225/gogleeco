@@ -1,27 +1,16 @@
 <template>
 	<div>
-
-
 		<!-- about us -->
 	<div id='About_us'>
-		<div >
-			<v-parallax src="/static/bg_top.png" v-show="false" > 
+		<div>
+			<v-parallax src="/static/aboutUs.png">
 				<v-layout
 				      align-center
 				      column
 				      justify-center
 				    >
-				    	<img src="static/bottom_logo.png" :style="`height:120px`">
-				    	<br>
-				      	<p dir="rtl" :class="`${$vuetify.breakpoint.width > 600?`display-2`:`headline`} font-weight-thick mb-3`" >
-				      		<span
-	      		               class="txt-rotate"
-	      		               data-period="2000"
-	      		               data-rotate='[ "الملتقى السعودي الثاني لصناعة الأعمال والوظائف"
-	      		               ,"يومي 30 ابريل و 1 مايو 2019",
-	      		               "ورش عمل","وظائف للجنسين"]'></span>
-				      	</p>
-				      	<v-btn round class="white black--text" large @click="href(`https://for2030.gogleeco.com`)">دخول</v-btn>
+				      <h1 class="display-2 font-weight-thick mb-3 Title bgTitle" >أحداث عالمية المستوى</h1>
+				      <img class='gr'src='/static/GraphicElAbout.png' style="margin: auto;">
 				    </v-layout>
 			</v-parallax>
 		</div>
@@ -286,7 +275,7 @@
 		<!-- <img src='/static/map.png' style="width: 100%;"> -->
 
 		<!-- will be removed -->
-		<v-dialog v-model="popUp" max-width="800px" style="border-radius:15px;">
+		<!-- <v-dialog v-model="popUp" max-width="800px" style="border-radius:15px;">
 				<div elevation-0 style="position:relative; border-radius:15px;">
 					<div style="position:absolute; bottom: 0px;">
 							<v-btn class="white" @click="popUp = !popUp" round  v-show="$vuetify.breakpoint.width > 600">
@@ -299,7 +288,7 @@
 					</div>
 					<img src="/static/gogleeco_pop.jpg" style="width:100%; height:auto; border-radius: 15px; display: block;"/>
 				</div>
-		</v-dialog>
+		</v-dialog> -->
 
 	</div>
 
