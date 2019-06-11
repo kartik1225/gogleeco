@@ -9,7 +9,7 @@
 				      column
 				      justify-center
 				    >
-				      <h1 class="display-2 font-weight-thick mb-3 Title bgTitle" >أحداث عالمية المستوى</h1>
+				      <h1 id='Title':class="`${$vuetify.breakpoint.width > 600?`display-2`:`display-1`} font-weight-thick mb-3 Title`" >World Class Events</h1>
 				      <img class='gr'src='/static/GraphicElAbout.png' style="margin: auto;">
 				    </v-layout>
 			</v-parallax>
